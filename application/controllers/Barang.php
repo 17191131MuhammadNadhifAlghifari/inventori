@@ -1,6 +1,5 @@
 <?php
 
-use Dompdf\Dompdf;
 
 class Barang extends CI_Controller{
 	public function __construct(){
@@ -76,7 +75,7 @@ class Barang extends CI_Controller{
 			'satuan' => $this->input->post('satuan'),
 		];
 
-		if($this->m_barang->ubah($data, $kode_barang)){
+		if($this->m_barang->ubah($data, $kode_baranh)){
 			$this->session->set_flashdata('success', 'Data Barang <strong>Berhasil</strong> Diubah!');
 			redirect('barang');
 		} else {
