@@ -75,7 +75,7 @@ class Barang extends CI_Controller{
 			'satuan' => $this->input->post('satuan'),
 		];
 
-		if($this->m_barang->ubah($data, $kode_baranh)){
+		if($this->m_barang->ubah($data, $kode_barang)){
 			$this->session->set_flashdata('success', 'Data Barang <strong>Berhasil</strong> Diubah!');
 			redirect('barang');
 		} else {
