@@ -5,7 +5,7 @@ class Customer extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 		if($this->session->login['role'] != 'petugas' && $this->session->login['role'] != 'admin') redirect();
-		$this->load->model('M_customer', 'm_customer')
+		$this->load->model('M_customer', 'm_customer');
 		$this->data['aktif'] = 'customer';
 	}
 
